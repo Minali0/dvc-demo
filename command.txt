@@ -1,0 +1,68 @@
+    git status
+ 0  git init
+ 1  ls -a
+ 2  git status
+ 3  touch README.md
+ 4  git status
+ 5  git commit -m "first commit"
+ 6  git add .
+ 7  git status
+ 8  git commit -m "first commit"
+ 9  git status
+ 10  touch test.py
+ 11  git status
+ 12  git add .
+ 13  git status
+ 14  git commit -m "second commit"
+ 15  git log
+ 16  git checkout 143a90
+ 17  git checkout ea7bf
+ 18  python test.py
+ 19  python3 test.py
+ 20  history
+ 2028  git status
+ 2029  touch .gitignore
+ 2030  dvc init
+ 2031  git status
+ 2040  dvc add data/data.csv
+ 2041  history
+  2042  git status
+ 2043  git add .
+ 2044  git commit -m "third commit"
+ 2045  dvc add data/data.csv
+ 2046  git status
+ 2047  dvc add data/data.csv
+ 2048  git add data/data.csv
+ 2049  dvc add data/data.csv
+ 2050  git add data/data.csv
+ 2051  git commit -m "first version"
+ 2052  dvc add data/data.csv
+ 2053  git add data/data.csv.dvc
+ 2054  git commit -m "second version"
+ 2055  dvc add data/data.csv
+ 2056  git add data/data.csv.dvc
+ 2057  git commit -m "third version"
+ 2058  dvc add data/data.csv
+ 2059  git add data/data.csv.dvc
+ 2060  git commit -m "fourth version"
+ 2061  git log
+ 2062  git checkout 3c760
+ 2063  git checkout 47d9e
+ 2064  dvc checkout 47d9e
+ 2065  dvc checkout
+ 2066  git checkout 3c760
+ 2067  dvc checkout
+ 2068  history
+ 
+ # for remote storage :-
+
+ dvc remote add -d remote_storage_4 /home/seaflux/Documents/MLops_learning/dvc_test/myremotestoragefile
+ 
+ # add new data in data.csv file 
+
+ 2076  dvc add data/data.csv
+ 2077  git add data/data.csv.dvc
+ 2078  git commit -m "my latest version"
+ 2079  dvc push
+  dvc repro # for reproducibilty so we have run dvc.yaml file 
+ 2004  dvc dag # direct acyclic graph in this to know the dependencies of the stages.

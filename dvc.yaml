@@ -1,0 +1,24 @@
+# reproduciblity
+
+stages:
+  stages_01:
+    cmd: python stage_01.py        # cmd - this is the command we have to execute. 
+    deps:                      # deps : dependencies - stage_01 depends on which file 
+      - stage_01.py
+    outs:                      # outs: output file is artifacts.txt
+      - artifact.txt  
+
+  stages_02:
+    cmd: python stage_02.py
+    deps:
+      - artifact.txt
+      - stage_02.py
+
+  stages_03:
+    cmd: python stage_03.py
+    deps:
+      - artifact2.txt
+      - stage_03.py
+    
+
+
