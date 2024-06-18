@@ -1,5 +1,3 @@
-# dvc-demo
-
 # Steps:-
 
 #### Make virtual environment
